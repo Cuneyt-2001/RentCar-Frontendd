@@ -1,4 +1,4 @@
-describe('Login', () => {
+describe('Create Account', () => {
     it('User cant create account if the field empty', () => {
         //Login
         //Click Loan
@@ -21,26 +21,14 @@ describe('Login', () => {
     //     name: /email /i
     //   }).type('Tom@gmail.com');
 
-    //   cy.findByRole('textbox', {
-    //     name: /Password/i
+    //   cy.findByRole('textbox', {rd/i
+    //     name: /Passwo
     //   }).type('Tom1234.');
 
       cy.findByRole('button', {
         name: /create account/i
       }).click();
       cy.url().should('eq',"http://localhost:3000/CreateAccount");
-
-     
-     
-    
-      
-     
-
-
-
-   
-
-     
 
     
       });

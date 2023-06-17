@@ -1,8 +1,6 @@
-describe('Login', () => {
+describe('Add Car', () => {
     it('Admin can add new  car ', () => {
        
-       
-
       cy.visit('http://localhost:3000/');
       cy.findByRole('textbox', {
         name: /email address/i
@@ -13,19 +11,8 @@ describe('Login', () => {
       }).click();
    
       cy.visit('http://localhost:3000/AddCar'); 
-     
-
- 
       cy.get('select[data-testid="selectbrand"]').select('Audi').trigger('change');
-
-
     cy.get('select[data-testid="selectbrand"]').should('have.value', 'Audi');
-
-
-   
-   
-
-
       cy.get('select[data-testid="selecttransmission"]').select('Manual').trigger('change');
       cy.get('select[data-testid="selecttransmission"]').should('have.value', 'Manual');
 
@@ -36,11 +23,8 @@ describe('Login', () => {
         cy.get('input[data-testid="testyear"]').type('1990');
         cy.get('input[data-testid="testyear"]').should('have.value', '1990')
 
-      // cy.get('button[data-testid="btntest"]').click();
-  //    cy.on('window:alert', (message) => {
-       
-      //  expect(message).to.equal('Adding car is succeed')
-    //  })
+       cy.get('button[data-testid="btntest"]').click();
+
 
 
     

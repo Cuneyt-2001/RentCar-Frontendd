@@ -20,7 +20,6 @@ import '@testing-library/jest-dom';
     const inputEl = screen.getByPlaceholderText("Model");
     expect(inputEl).toHaveValue("");
     fireEvent.change(inputEl, { target: { value: 'X5' } });
-   // userEvent.type(inputEl,"X5");
     expect(inputEl).toHaveValue("X5");
  
   });
